@@ -1,0 +1,35 @@
+.texto{
+    animation: textAnimate 10s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.listMob::after{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    transform: scaleX(0);
+    transition: .5s ease;
+    border-radius: 5px;
+}
+
+.listMob:hover::after{
+    transform: scaleX(1);
+}
+
+
+
+
+@keyframes textAnimate {
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position: 400%;
+    }
+}
