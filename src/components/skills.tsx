@@ -11,7 +11,7 @@ type SkillsType = {
 export default function Skills({ desc }: { desc: SkillsType[] }) {
   return (
     <>
-      <section id='skills' className={twMerge(styles.section, "w-full bg-slate-200 flex flex-col lg:flex-wrap justify-center lg:items-start items-center p-10")}>
+      <section id='skills' className={twMerge(styles.section, "w-full bg-slate-400 flex flex-col lg:flex-wrap justify-center lg:items-start items-center p-10")}>
         <div className="flex justify-center items-center text-center lg:w-full mb-16 lg:mb-36">
           <h1 className="text-4xl lg:text-6xl font-bold flex justify-center items-center">
             Habilidades
@@ -26,10 +26,10 @@ export default function Skills({ desc }: { desc: SkillsType[] }) {
         </div>
         <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-center">
           {desc?.map((list) => (
-            <div
+            <div key={list.id}
               className={twMerge(
                 styles.gradient,
-                "min-h-[300px] w-[300px] mg:w-[350px] border-[2px] border-cyan-700 shadow-black shadow-md rounded-lg p-5 flex flex-col justify-center items-center mb-10 lg:mr-10 hover:shadow-lg hover:shadow-black transition duration-700"
+                "min-h-[300px] w-[300px] mg:w-[350px] border-[2px] border-cyan-700 shadow-black shadow-md rounded-lg p-5 flex flex-col justify-center items-center mb-10 lg:mr-10 hover:shadow-lg hover:shadow-black transition duration-300"
               )}
             >
               <div className="mb-3">

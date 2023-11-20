@@ -25,17 +25,8 @@ export default function About() {
           )}
         >
           <p>
-            Comecei a estudar programação em janeiro de 2023 primeiramente foquei em aprender a lógica de programação e logo em seguida comecei meus estudos em Python um mês depois, então comecei meus estudos no front-end básico. Atualmente domino a área do front-end e back-end com facilidade, pois estudei muito sobre essas áreas. Também tenho um conhecimento básico na área de Ciência de Dados
+            Comecei a estudar programação em janeiro de 2023 primeiramente foquei em aprender a lógica de programação e logo em seguida comecei meus estudos em Python um mês depois, então comecei meus estudos no front-end básico. Atualmente domino a área do front-end e back-end com facilidade, pois estudei muito sobre essas áreas.
           </p>
-        </div>
-        <div className="w-[100%] absolute bottom-[10px] left-0">
-          <p className="flex flex-col justify-center items-center text-lg text-cyan-500 lg:text-gray-50">Arraste para mais! <Image 
-          src={'/icons/arrow.png'}
-          alt='seta para baixo'
-          height={50}
-          width={50}
-          className='animate-bounce mt-5'
-          /></p>
         </div>
       </section>
     </>

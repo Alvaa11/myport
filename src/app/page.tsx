@@ -37,8 +37,35 @@ const list = [
     desc: "Tive um começo complicado com o Typescript, mas hoje simplesmente não vivo sem, principalmente para usar junto com o Next.js em construção de Aplicativos Web",
     img: "typescript.png",
     id: 7,
-  }
+  },
 ];
+
+const exps = [
+  {
+    id: 1,
+    carg: '.',
+    desc: '',
+    time: '',
+  },
+  {
+    id: 2,
+    carg: '.',
+    desc: '',
+    time: '',
+  },
+  {
+    id: 3,
+    carg: '.',
+    desc: '',
+    time: '',
+  },
+  {
+    id: 4,
+    carg: '.',
+    desc: '',
+    time: '',
+  },
+]
 
 export default function Home() {
   return (
@@ -46,7 +73,7 @@ export default function Home() {
       <main>
         <About />
         <Skills desc={list} />
-        <Expirence />
+        <Expirence exps={exps} />
       </main>
     </>
   );

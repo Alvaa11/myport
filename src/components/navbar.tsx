@@ -12,17 +12,17 @@ export default function Navbar() {
 
   function openSideBar() {
     setBack("flex");
-    setSide("translate-x-[0px] flex");
+    setSide("translate-x-[0px]");
   }
 
   function closeSideBar() {
     setBack("hidden");
-    setSide("translate-x-[250px] hidden");
+    setSide("translate-x-[250px]");
   }
 
   return (
     <>
-      <header className="w-full h-[150px] bg-transparent fixed top-0">
+      <header className="w-full h-[79px] bg-transparent fixed top-0">
         <div className="w-full h-full flex justify-between items-center px-10">
           <div className="flex items-center justify-center">
             <h1 className="mr-10 text-4xl font-semibold text-gray-50 lg:text-6xl">
@@ -75,7 +75,7 @@ export default function Navbar() {
           onClick={closeSideBar}
           className={twMerge(
             back,
-            "absolute w-full h-screen bg-black opacity-70 top-0"
+            "absolute w-full h-screen bg-black opacity-70 top-0 z-20"
           )}
         >
           <Image
@@ -89,7 +89,7 @@ export default function Navbar() {
         <nav
           className={twMerge(
             side,
-            "w-[250px] h-screen fixed top-0 right-0 bg-slate-950 py-10 justify-around items-center flex-col transition-all duration-700"
+            "w-[250px] h-screen fixed top-0 flex right-0 bg-slate-950 py-10 justify-around items-center flex-col transition duration-500 z-30"
           )}
         >
           <div
