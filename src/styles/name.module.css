@@ -16,11 +16,11 @@
 ---------------------------------------------- */
 
 .animationLeft {
-  animation: scale-up-horizontal-left 1s;
+  animation: scale-up-horizontal-left 1.5s;
 }
 
 .animationRight {
-  animation: scale-up-horizontal-right 1s;
+  animation: scale-up-horizontal-right 1.5s;
 }
 
 @keyframes scale-up-horizontal-left {
