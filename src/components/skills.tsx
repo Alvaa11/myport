@@ -2,13 +2,16 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import styles from "../styles/skills.module.css";
 
-type SkillsType = {
-  id: Number;
-  desc: String;
-  img: String;
+interface SkillsType {
+  id: number;
+  description: string;
+  img: string;
 };
 
-export default function Skills({ desc }: { desc: SkillsType[] }) {
+
+export default async function Skills() {
+  const data : SkillsType[] = await fetch("https://apimyportskills.azurewebsites.net/api/v01/skill").then(res => res.json())
+
   return (
     <>
       <section id='skills' className={twMerge(styles.section, "w-full bg-slate-400 flex flex-col lg:flex-wrap justify-center lg:items-start items-center p-10")}>
@@ -25,16 +28,16 @@ export default function Skills({ desc }: { desc: SkillsType[] }) {
           </h1>
         </div>
         <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-center">
-          {desc?.map((list) => (
-            <div key={list.id}
+          {data.map((skill) => (
+            <div key={skill.id}
               className={twMerge(
                 styles.gradient,
-                "min-h-[300px] w-[300px] mg:w-[350px] border-[2px] border-cyan-700 shadow-black shadow-md rounded-lg p-5 flex flex-col justify-center items-center mb-10 lg:mr-10 hover:shadow-lg hover:shadow-black transition duration-300"
+                "min-h-[300px] w-[300px] md:w-[350px] border-[2px] border-cyan-700 shadow-black shadow-md rounded-lg p-5 flex flex-col justify-center items-center mb-10 lg:mr-10 hover:shadow-lg hover:shadow-black transition duration-300"
               )}
             >
               <div className="mb-3">
                 <Image
-                  src={`/icons/${list.img}`}
+                  src={`/icons/${skill.img}`}
                   alt="icone"
                   height={50}
                   width={50}
@@ -42,7 +45,7 @@ export default function Skills({ desc }: { desc: SkillsType[] }) {
               </div>
               <div className="text-gray-50 text-lg">
                 <p>
-                  {list.desc}
+                  {skill.description}
                 </p>
               </div>
             </div>
