@@ -22,11 +22,13 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full h-[79px] bg-transparent fixed top-0">
+      <header className="w-full h-[79px] bg-transparent fixed top-0 z-10">
         <div className="w-full h-full flex justify-between items-center px-10">
           <div className="flex items-center justify-center">
             <h1 className="mr-10 font-semibold text-gray-50 text-3xl md:text-4xl lg:text-6xl">
-              Alvaro <span className="text-red-500">José</span>
+              <Link href={"/"}>
+                Alvaro <span className="text-red-500">José</span>
+              </Link>
             </h1>
             <ul className="hidden lg:flex text-xl text-gray-50">
               <li className="mr-2">
