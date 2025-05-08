@@ -37,13 +37,13 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="mr-2">
-                <Link href={"/#skills"} passHref>
-                  Hablidades/
+                <Link href={"/#exp"} passHref>
+                  Experiências/ 
                 </Link>
               </li>
               <li className="mr-2">
-                <Link href={"/#exp"} passHref>
-                  Experiências
+                <Link href={"/#skills"} passHref>
+                  Hablidades
                 </Link>
               </li>
             </ul>
